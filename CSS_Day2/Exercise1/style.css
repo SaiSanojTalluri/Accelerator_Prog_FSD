@@ -1,0 +1,16 @@
+body{
+    background: rgba(238, 219, 222,0.2                                                                              );
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box{
+    height: 100px;
+    width: 320px;
+    line-height: 1.8;
+    border: 3px solid blue;
+    padding: 20px;
+    margin: 30px;
+    background-color: lightyellow;
+}
+span{
+    background-color: rgba(205, 240, 252,0.3);
+}

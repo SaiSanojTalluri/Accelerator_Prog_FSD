@@ -1,0 +1,126 @@
+:root {
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text: #212529;
+  --color-primary: #3f51b5;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+
+  --radius: 0.5rem;
+  --z-sticky: 10;
+}
+
+.theme-dark {
+  --color-bg: #121212;
+  --color-surface: #1e1e1e;
+  --color-text: #f1f1f1;
+  --color-primary: #7986cb;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.app {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  grid-template-columns: 270px 1fr;
+  grid-template-rows: 64px 1fr;
+  height: 100vh;
+}
+
+.app__header {
+  grid-area: header;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-2);
+}
+
+.app__sidebar {
+  grid-area: sidebar;
+  background: var(--color-surface);
+  border-right: 1px solid #ddd;
+  padding: var(--space-2);
+}
+
+.app__content {
+  grid-area: content;
+  padding: var(--space-2);
+  overflow-y: auto;
+}
+
+@media (max-width: 1023px) {
+  .app {
+    grid-template-areas:
+      "header"
+      "content";
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 1fr;
+  }
+
+  .app__sidebar {
+    display: none; 
+  }
+}
+
+.subheader {
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2);
+  z-index: var(--z-sticky);
+  border-bottom: 1px solid #ddd;
+}
+
+.subheader__title {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.card__title {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  margin: 0;
+}
+
+.btn {
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+

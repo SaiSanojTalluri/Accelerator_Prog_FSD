@@ -1,0 +1,16 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(226, 224, 224);
+    /* background-image: url("./assets_user_photo.png"); */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden
+}
+.card{
+    background-color: white;
+    padding: 5px;
+    width: 280px;   
+    border-radius: 10px;
+}

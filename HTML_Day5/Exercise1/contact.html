@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <h2>Get in Touch</h2>
+    <section>
+        <form>
+            <label for="name">Name :</label>
+            <input type="text" id="name" placeholder="Enter your name..." required>
+            <br/>
+            <br/>
+            <label for="email">Email :</label>
+            <input type="text" id="email" placeholder="Enter your email..." required>
+            <br/>
+            <br/>
+            <label for="mobile">Mobile :</label>
+            <input type="text" id="mobile" placeholder="Enter your number..." required>
+            <br/>
+            <br/>
+            <label for="contact">Gender :</label>
+            
+            <input type="radio" name="Gender" id="male" value="male">
+            <label for="phone">Male</label>
+            
+            <input type="radio" name="Gender" id="female" value="female">
+            <label for="watsapp">Female</label>
+            
+            <input type="radio" name="Gender" id="others" value="others">
+            <label for="email">Others</label>
+            <br/>
+            <br/>
+            <textarea name="txtar" id="txtar" rows="10" cols="28" placeholder="write your message here..." required></textarea>
+            <br/>
+            <br/>
+            <label for="contact">Preffered contact method :</label>
+            
+            <input type="checkbox" name="phone" id="phone" value="Phone">
+            <label for="phone">Phone</label>
+            
+            <input type="checkbox" name="watsapp" id="watsapp" value="watsapp">
+            <label for="watsapp">WatsApp</label>
+            
+            <input type="checkbox" name="email" id="email" value="email">
+            <label for="email">Email</label>
+            <br/>
+            <br/>
+            <label for="country">Country</label>
+            <select name="drpdwn" id="drpdwn" required>
+                <option value="" selected disabled>-- Select --</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select>
+            <br/>
+            <br/>
+            <button>Submit</button>
+        </form>
+    </section>
+    <br/>
+    <hr/>
+</body>
+</html>
